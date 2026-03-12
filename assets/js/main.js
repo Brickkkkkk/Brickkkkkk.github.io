@@ -68,9 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Typing Effect
     const textElement = document.getElementById('typing-text');
     const texts = [
-        dailyPoem, // The Daily Poem
-        "System ready...",
-        "Welcome to my digital garden."
+        dailyPoem // The Daily Poem
     ];
     
     let textIndex = 0;
