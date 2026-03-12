@@ -1,3 +1,30 @@
-theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
+# Site settings
+title: "buaawzz@github-blog:~$"
+email: buaawzz@hotmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  A geek style technical blog and portfolio for buaawzz.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://Brickkkkkk.github.io" # the base hostname & protocol for your site
+twitter_username: buaawzz
+github_username: Brickkkkkk
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Custom Theme Settings
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

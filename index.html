@@ -1,10 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Personal Blog</title>
-</head>
-<body>
-    <h1>Welcome to My Blog</h1>
-    <p>This is my personal technology blog hosted on GitHub Pages.</p>
-</body>
-</html>
+---
+layout: default
+title: Home
+---
+
+<div class="home-intro">
+    <pre class="ascii-art">
+   _____           _    _       _ _ _ 
+  / ____|         | |  | |     | | | |
+ | |  __  ___  ___| | _| | __ _| | | |
+ | | |_ |/ _ \/ _ \ |/ / |/ _` | | | |
+ | |__| |  __/  __/   <| | (_| |_|_|_|
+  \_____|\___|\___|_|\_\_|\__,_(_|_|_)
+    </pre>
+    
+    <div class="typing-container">
+        <span id="typing-text"></span><span class="cursor">&nbsp;</span>
+    </div>
+
+    <p>
+        I am a passionate developer, explorer, and tech enthusiast.
+        Welcome to my digital garden.
+    </p>
+
+    <div class="social-links">
+        <a href="https://github.com/{{ site.github_username }}">GitHub</a> |
+        <a href="mailto:{{ site.email }}">Email</a> |
+        <a href="/blog">Blog</a>
+    </div>
+</div>
+
+<div class="recent-posts">
+    <h2>> ls -lat ./latest_posts</h2>
+    <ul class="post-list">
+        {% for post in site.posts limit:3 %}
+        <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

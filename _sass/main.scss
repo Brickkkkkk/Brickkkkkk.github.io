@@ -1,0 +1,218 @@
+// Variables
+$bg-color: #0d1117;
+$text-color: #c9d1d9;
+$accent-color: #00ff00; // Terminal Green
+$secondary-accent: #58a6ff; // Blue
+$font-stack: 'Fira Code', 'Courier New', monospace;
+
+// Global Reset
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $bg-color;
+    color: $text-color;
+    font-family: $font-stack;
+    line-height: 1.6;
+    padding: 20px;
+    font-size: 16px;
+}
+
+a {
+    color: $secondary-accent;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        color: $accent-color;
+    }
+}
+
+// Layout
+.terminal-window {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(13, 17, 23, 0.95);
+    border: 1px solid #30363d;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    min-height: 90vh;
+    border-radius: 6px;
+    position: relative;
+    
+    // Scanline effect (optional)
+    &::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+        z-index: 2;
+        background-size: 100% 2px, 3px 100%;
+        pointer-events: none;
+    }
+}
+
+.content {
+    margin: 40px 0;
+    min-height: 400px;
+}
+
+// Header
+.site-header {
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    
+    .terminal-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        
+        .prompt {
+            color: $accent-color;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        
+        nav {
+            display: flex;
+            gap: 15px;
+            
+            .nav-link {
+                color: $text-color;
+                position: relative;
+                
+                &:hover {
+                    color: $accent-color;
+                    &::before {
+                        content: ">";
+                        position: absolute;
+                        left: -15px;
+                        color: $accent-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Footer
+.site-footer {
+    border-top: 1px solid #30363d;
+    padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: darken($text-color, 20%);
+    
+    .blink {
+        animation: blink 1s step-end infinite;
+    }
+}
+
+// Animations
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+// Typography & Elements
+h1, h2, h3, h4, h5, h6 {
+    color: $accent-color;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+h1 { font-size: 2rem; border-bottom: 1px dashed #30363d; padding-bottom: 0.5rem; }
+h2 { font-size: 1.5rem; }
+
+code {
+    background: #161b22;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #ff7b72;
+}
+
+pre {
+    background: #161b22;
+    padding: 15px;
+    overflow-x: auto;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    
+    code {
+        background: none;
+        padding: 0;
+        color: inherit;
+    }
+}
+
+blockquote {
+    border-left: 4px solid $secondary-accent;
+    padding-left: 15px;
+    color: darken($text-color, 10%);
+    font-style: italic;
+}
+
+// Home Page Specifics
+.home-intro {
+    text-align: center;
+    margin-bottom: 50px;
+    
+    .ascii-art {
+        font-size: 10px;
+        line-height: 10px;
+        white-space: pre;
+        color: $secondary-accent;
+        margin-bottom: 30px;
+        overflow-x: hidden;
+    }
+    
+    .typing-container {
+        font-size: 1.5rem;
+        min-height: 3rem;
+        margin-bottom: 20px;
+        
+        #typing-text {
+            color: $accent-color;
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.5rem;
+            background-color: $accent-color;
+            animation: blink 1s step-end infinite;
+            vertical-align: bottom;
+        }
+    }
+}
+
+.post-list {
+    list-style: none;
+    
+    li {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: baseline;
+        
+        .post-meta {
+            color: darken($text-color, 30%);
+            min-width: 120px;
+            font-size: 0.9em;
+        }
+        
+        .post-link {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+    }
+}

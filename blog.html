@@ -1,0 +1,18 @@
+---
+layout: default
+title: Blog Archive
+permalink: /blog/
+---
+
+<div class="blog-archive">
+    <h1>> cat ./archive.log</h1>
+    
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <li>
+            <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
