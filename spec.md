@@ -3,6 +3,8 @@
 ## 1. Overview
 Create a personalized, "Geek/Hacker" styled personal website hosted on GitHub Pages. The site will serve as both a technical blog and a personal portfolio/resume. The design will draw inspiration from command-line interfaces (CLI), IDEs, and cyberpunk aesthetics, focusing on minimalism, performance, and a developer-centric user experience.
 
+**Refinement:** The "Geek" style should be subtle and demonstrated through design and functionality, not by explicitly stating "I am a Geek".
+
 ## 2. Design Concept: "The Terminal"
 *   **Visual Style**:
     *   **Background**: Deep dark grey/black (`#0d1117` or `#1e1e1e`).
@@ -23,11 +25,12 @@ Create a personalized, "Geek/Hacker" styled personal website hosted on GitHub Pa
     *   JavaScript (Vanilla, for typing effects and simple interactions).
     *   Liquid (Jekyll templating).
     *   Markdown (For blog content).
+    *   **Math**: MathJax (for rendering LaTeX formulas).
 
 ## 4. Page Structure
 
 ### 4.1 Home (`/` or `index.html`)
-*   **Header**: ASCII Art of the username or a cool logo.
+*   **Header**: ASCII Art of the text "BRICK".
 *   **Hero Section**:
     *   Animated "Typing effect" introduction (e.g., `> Hello, World! I am buaawzz...`).
     *   Brief bio/elevator pitch.
@@ -40,7 +43,7 @@ Create a personalized, "Geek/Hacker" styled personal website hosted on GitHub Pa
 
 ### 4.3 Post Layout (`_layouts/post.html`)
 *   **Metadata**: Title, Date, Tags, Reading time.
-*   **Content**: Markdown rendered content with syntax highlighting (Rouge).
+*   **Content**: Markdown rendered content with syntax highlighting (Rouge) and Math support (MathJax).
 *   **Navigation**: Previous/Next post links.
 
 ### 4.4 About/Resume (`/about` or inline in Home)
@@ -50,6 +53,7 @@ Create a personalized, "Geek/Hacker" styled personal website hosted on GitHub Pa
 ## 5. Functional Requirements
 *   **Responsiveness**: Must look good on mobile devices (terminal text wraps correctly).
 *   **Code Highlighting**: Syntax highlighting for code blocks is essential for a tech blog.
+*   **Math Support**: Enable MathJax for rendering LaTeX equations (e.g., `$E=mc^2$`).
 *   **SEO**: Basic meta tags, sitemap.xml.
 *   **Performance**: Minimal external requests, fast loading.
 
