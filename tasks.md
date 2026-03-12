@@ -14,8 +14,10 @@
 - [x] **Syntax Highlighting**: Add GitHub Dark theme CSS for code blocks.
 
 ## Phase 3: Homepage (Personal Profile) - REFINEMENT
-- [ ] **ASCII Art Update**: Change the ASCII art in `index.html` to display "BRICK".
-- [ ] **Content Update**: Remove "Geek" references from text, focus on technical identity.
+- [x] **ASCII Art Update**: Change the ASCII art in `index.html` to display "BRICK".
+- [x] **Content Update**: Remove "Geek" references from text, focus on technical identity.
+- [ ] **Daily Poem Logic**: Implement JS logic to pick a poem based on the date.
+- [ ] **Poem Data**: Create a list of Chinese ancient poems in `main.js`.
 - [x] **Typing Effect**: Write a vanilla JS script for the typewriter intro effect.
 - [x] **Profile Section**: Add HTML structure for ASCII art, bio, and social links.
 - [ ] **Skills Section**: Add a styled skills list (progress bars or command output style).
@@ -23,8 +25,8 @@
 ## Phase 4: Blog Functionality - REFINEMENT
 - [x] **Post Layout**: Create `_layouts/post.html` with title, date, and content area.
 - [x] **Blog Index**: Create `blog.md` or update Home to list recent posts.
-- [ ] **Math Support**: Add MathJax CDN to `_layouts/default.html` or `_layouts/post.html` and configure it.
-- [ ] **Sample Content Update**: Update the sample post to include a Math formula example.
+- [x] **Math Support**: Add MathJax CDN to `_layouts/default.html` or `_layouts/post.html` and configure it.
+- [x] **Sample Content Update**: Update the sample post to include a Math formula example.
 
 ## Phase 5: Polish & Deploy
 - [ ] **Responsiveness**: Test and fix CSS for mobile screens.

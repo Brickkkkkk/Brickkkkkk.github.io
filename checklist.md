@@ -5,12 +5,14 @@
 - [ ] Navigation mimics a command-line prompt or terminal interface.
 - [ ] ASCII Art on the homepage displays "BRICK".
 - [ ] No explicit "I am a Geek" text; style speaks for itself.
+- [ ] **Hero Text**: Displays a Chinese ancient poem instead of generic English text.
 - [ ] Text is legible with sufficient contrast.
 - [ ] Mobile view is usable (no horizontal scrolling on text, menus accessible).
 
 ## Features
 - [ ] **Home Page**:
-    - [ ] Displays the "Typing Effect" introduction.
+    - [ ] Displays the "Typing Effect" with the Daily Poem.
+    - [ ] The poem changes every day (based on date).
     - [ ] Shows personal information/bio.
     - [ ] Links to GitHub/Email work.
 - [ ] **Blog**:
